@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact</title>
+
+    <!-- bootstrap minified css  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link href="css/index.css" rel="stylesheet">
+
+    <!-- font awesome stylehseet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- navigation menu  -->
+    <nav class="navbar navbar-inverse navbar-fixed-top nav-pad">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand white-text">EAZY ERP 4.0</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="white-text"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li><a href="index.html#about" class="white-text"><i class="far fa-address-card"></i> About</a></li>
+                    
+                    <li><a href="contact.html" class="white-text"><span class="glyphicon glyphicon-earphone"></span>
+                            Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- contact form  -->
+    <div class="container">
+        <center><div style="font-size: 40px;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">RESERVE YOUR SEAT</div></center>
+        <br><br><br>
+        <div class="col-sm-4 image padding">
+            <center>
+                <img src="download.jfif" style="width: 100px; height: 100px;"><br><br>
+            <div><b style="font-size: 25px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Phone Number</b><br>+919760290652</div>
+            <br><br>
+            <img src="OIP.jfif" style="width: 100px; height: 100px;"><br>
+            <div><b style="font-size: 25px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Email</b><br>architjain511@gmail.com</div>
+        </center>   
+        </div>
+        <div class="col-md-offset-2 col-md-6 about-padding container1 img-responsive">
+            <div>
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Name</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Desgination</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Company Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Contact Number</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <br>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <br>
+                      </div>
+                      <br>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- footer part  -->
+    <footer>
+        <div class="social-apps flex">
+            
+            <span><a href="https://www.instagram.com/architjain.19/" target="_blank"> <i
+                        class="fab fa-instagram social"></i></a></span>
+            <span><a href="https://www.linkedin.com/in/archit-jain-2b660022b/" target="_blank"> <i
+                        class="fab fa-linkedin social"></i></a></span>
+            <span><a href="mailto:architjain511@gmail.com" target="_blank"> <i
+                        class="fab fa-google-plus social"></i></a></span>
+        </div>
+        <div class="container text-center">
+            Copyright &copy; 2023 | All Rights Reserved | Arcit Jain
+        </div>
+    </footer>
+
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        $("#submit").click(function () {
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var message = $("#message").val();
+
+            if (name == '' || email == '' || message == '') {
+                swal({
+                    title: "Something Missing!",
+                    text: "Hey, please fill all the fields.",
+                    icon: "Error",
+                    button: "Oh, Sorry!",
+                });
+            }
+            else {
+                swal({
+                    title: "Message Sent!",
+                    text: "Wait for our reply!",
+                    icon: "Success",
+                    button: "Sure!",
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
